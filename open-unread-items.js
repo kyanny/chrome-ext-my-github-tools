@@ -1,0 +1,1 @@
+document.querySelectorAll('.Box-row--unread a.js-navigation-open').forEach(elem => window.open(elem.href, '_blank'))
