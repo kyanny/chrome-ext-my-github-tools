@@ -11,8 +11,11 @@ function click(e) {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  var divs = document.querySelectorAll('div');
-  for (var i = 0; i < divs.length; i++) {
-    divs[i].addEventListener('click', click);
-  }
+  document.getElementById('open-unread-items').addEventListener('click', (event) => {
+    chrome.tabs.executeScript(null,
+      {
+        code: `document.querySelectorAll('.Box-row--unread a.js-navigation-open').forEach(elem => window.open(elem.href, '_blank'))`
+      }
+    );
+  });
 });
