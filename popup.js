@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         code: `document.querySelectorAll('.Box-row--unread a.js-navigation-open').forEach(elem => window.open(elem.href, '_blank'))`
       }
     );
+    window.close();
   });
 });
 
@@ -27,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function () {
         code: `document.querySelectorAll('.Details-element').forEach(elem => !elem.open && elem.querySelector('summary').click())`
       }
     );
+    window.close();
   });
 });
 
@@ -37,5 +39,6 @@ document.addEventListener('DOMContentLoaded', function () {
         code: `document.querySelectorAll('.Details-element').forEach(elem => elem.open && elem.querySelector('summary').click())`
       }
     );
+    window.close();
   });
 });
