@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  document.getElementById('show-hidden-comments').addEventListener('click', (event) => {
+  document.getElementById('show-comment-summary').addEventListener('click', (event) => {
     chrome.tabs.executeScript(null,
       {
         code: `document.querySelectorAll('.Details-element').forEach(elem => !elem.open && elem.querySelector('summary').click())`
